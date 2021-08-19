@@ -26,6 +26,8 @@ db.users = require("./users")(sequelize, DataTypes);
 //   console.log("DB synch successfully");
 // });
 
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   console.log("DB synch successfully");
 });
+
+module.exports = db;

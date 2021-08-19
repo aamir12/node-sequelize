@@ -23,6 +23,9 @@ app.use(
 app.use(express.json());
 
 //include all routes here
+const userCtrl = require("./controllers/userController");
+
+app.get("/add", userCtrl.add);
 
 const PORT = process.env.PORT || 5000;
 app.listen(
